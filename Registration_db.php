@@ -1,22 +1,47 @@
 <?php
- include("db-connect.php)
- if(isset($_POST[signup"])
-  {
-  $username=$_POST["Username"];
-  $Password=$_post["password"];
-  $email=$_post["email"];
-  $query="insert into login(username,password,email);
-       values($username,$password,$email)";
-  if(musqli_query($conn,$query))
-  {
-   echo "Registration Successfull";
-  }else{
-   echo "Registration unsuccessful";
-  }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
+
+include("db_connect.php");
+
+echo "</br>"; 
+
+if(isset($_POST['signup']))
+{
+
+$name=$_POST['username'];
+$password=$_POST['password'];
+$email=$_POST['email'];
+$query="insert into login(username,password,email) values('$name','$password','$email')";
+
+
+}
+if(mysqli_query($conn,$query))
+{
+  echo "Registered successfully!";
+}
+else{
+echo "data not inserted";
+}
+
+
+?>
+
+
+  
+
+
+
+
+
+
+  
+ 
+
+
+ 
+
+
+
+
+
+
+
